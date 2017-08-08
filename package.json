@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "bitbar": "^0.3.0"
+  },
+  "devDependencies": {
+    "rollup": "^0.45.2"
+  }
+}
