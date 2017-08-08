@@ -1,18 +1,17 @@
 const bitbar = require('bitbar');
 const serverUtils = require('cbiServerUtils');
-const config = require('./config');
 const _ = require('lodash');
 
 const { getManyServers } = serverUtils;
 
 const { sep: Separator } = bitbar;
 
-const DEFAULT_ENVS = ['dev', 'staging', 'prod'];
+const DEFAULT_ENVS = ['dev', 'prod'];
 const DEFAULT_SERVERS = ['api', 'cbi-site', 'test-runner'];
 
 const setupSshActions = (envs, servers) =>
   getManyServers(envs, servers)
-    .then(serverMap =>
+    .then((serverMap = {}) =>
       Object.keys(serverMap).map(server => ({
         text: server,
         submenu: envs.map(env => ({
@@ -27,7 +26,7 @@ const setupSshActions = (envs, servers) =>
       }))
     )
     .catch(err => {
-      console.log(err);
+      console.log('ERRRRROR');
       return null;
     });
 
