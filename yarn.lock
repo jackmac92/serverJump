@@ -56,9 +56,9 @@ buffer@4.9.1:
     ieee754 "^1.1.4"
     isarray "^1.0.0"
 
-cbiServerUtils@^3.2.0:
-  version "3.2.0"
-  resolved "https://npm.jackmac.party/cbiServerUtils/-/cbiServerUtils-3.2.0.tgz#63d4dbfacb3b11ae669da079c0ee362b9eee84d5"
+cbiServerUtils@^3.5.0:
+  version "3.5.0"
+  resolved "https://npm.jackmac.party/cbiServerUtils/-/cbiServerUtils-3.5.0.tgz#99114b1abe3fe922a7194386b31e219544835a3d"
   dependencies:
     aws-sdk "^2.52.0"
     isomorphic-fetch "^2.2.1"

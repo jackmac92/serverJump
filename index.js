@@ -6,7 +6,7 @@ const { getManyServers } = serverUtils;
 
 const { sep: Separator } = bitbar;
 
-const DEFAULT_ENVS = ['dev', 'prod'];
+const DEFAULT_ENVS = ['dev', 'staging', 'prod'];
 const DEFAULT_SERVERS = ['api', 'cbi-site', 'test-runner'];
 
 const setupSshActions = (envs, servers) =>
@@ -26,7 +26,6 @@ const setupSshActions = (envs, servers) =>
       }))
     )
     .catch(err => {
-      console.log('ERRRRROR');
       return null;
     });
 
@@ -34,7 +33,6 @@ setupSshActions(DEFAULT_ENVS, DEFAULT_SERVERS)
   .then(sshStuff => {
     const aboveTheFold = {
       text: 'SSH',
-      color: bitbar.darkMode ? 'white' : 'red',
       dropdown: false
     };
     return bitbar([

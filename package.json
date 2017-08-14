@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "bitbar": "^0.3.0",
-    "cbiServerUtils": "^3.2.0"
+    "cbiServerUtils": "^3.5.0"
   },
   "devDependencies": {
     "rollup": "^0.45.2"
