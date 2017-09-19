@@ -13,6 +13,8 @@
     "webpack": "^3.5.5"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "rollup": "^0.45.2"
   }
 }
