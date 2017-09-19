@@ -1,6 +1,11 @@
 {
   "scripts": {
-    "build": "webpack"
+    "prebuild": "yarn install",
+    "build": "webpack",
+    "bitBuild:bang": "echo \"#! /usr/bin/env $(which node)\" | cat - bundle.js > temp && mv -f temp bundle.js",
+    "bitBuild:execute": "sudo chmod +x bundle.js",
+    "bitBuild:move": "[[ -z $BITBAR_PLUGIN_DIR ]]; mv bundle.js $BITBAR_PLUGIN_DIR",
+    "bitBuild": "yarn run build && yarn run bitBuild:bang && yarn run bitBuild:execute && yarn run bitBuild:move"
   },
   "dependencies": {
     "bitbar": "^0.3.0",
