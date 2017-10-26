@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "bitbar": "^0.3.0",
-    "cbiServerUtils": "^3.5.0",
+    "cbiServerUtils": "^3.5.1",
     "webpack": "^3.5.5"
   },
   "devDependencies": {
